@@ -3,4 +3,47 @@ nav{
     justify-content: space-between;
     height: 100px;
     align-items: center;
+
+    a{
+        transition: all 0.3s ease;
+
+        &:hover{
+            scale: 1.1;
+        }
+    }
+
+    .left{
+        flex: 3;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        font-weight: 600;
+        .logo{
+            font-weight: bold;
+            align-items: center;
+            font-size: 28px;
+            display: flex;
+            gap: 10px;
+            img{
+               width: 80px; 
+            }
+        }
+    }
+    .right{
+        flex: 2;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+
+        a{
+            padding: 12px 24px;
+            margin: 20px;
+        }
+        .register_btn{
+           background-color: #fece51; 
+
+        }
+    }
 }
