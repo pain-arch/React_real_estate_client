@@ -8,6 +8,7 @@ nav{
 
     a{
         transition: all 0.3s ease;
+
         @include sm{
             display: none;
         }
@@ -68,6 +69,7 @@ nav{
 
         .menuIcon{
             display: none;
+            z-index: 999;
 
             img{
                 width: 36px;
@@ -76,19 +78,34 @@ nav{
             }
 
             @include sm{
-                display: initial;
+                display: inline;
             }
         }
 
         .menu{
-            display: none;
+        
             position: absolute;
             top: 0;
-            right: 0;
+            right: -50%;
             background-color: black;
             color: white;
             height: 100vh;
             width: 50%;
+            transition: all 0.5s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+         
+            &.active{
+                right: 0 !important;
+            }
+
+            @include sm{
+                a{
+                    display: initial;
+                }
+            }
         }
     }
 }
