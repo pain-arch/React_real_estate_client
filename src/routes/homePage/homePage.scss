@@ -4,7 +4,12 @@
 
     .textContainer{
        flex: 3; 
+
+       .wrapper{
+        padding-right: 100px;
+       }
     }
+
     .imgContainer{
         flex: 2;
         background-color: #fcf5f3;
