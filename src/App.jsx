@@ -2,9 +2,6 @@ import HomePage from "./routes/homePage/homePage";
 import Layout from "./routes/layout/layout";
 import ListPage from "./routes/listPage/listPage";
 import SinglePage from "./routes/singlePage/singlePage";
-
-
-
 import {
   createBrowserRouter,
   RouterProvider,
@@ -18,7 +15,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/list", element: <ListPage /> },
-      { path: "/list/:id", element: <SinglePage />}
+      { path: "/:id", element: <SinglePage />}
     ],
   },
 ]);
