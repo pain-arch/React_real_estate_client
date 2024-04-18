@@ -3,10 +3,6 @@
 .searchBar {
     .type {
 
-        @include sm {
-            margin-bottom: 5px;
-        }
-
 
         button {
             padding: 16px 36px;
@@ -25,9 +21,7 @@
                 border-top-left-radius:5px;
                 border-right: none;
 
-                @include sm {
-                    border-bottom: 1px solid #999;
-                }
+               
             }
 
             &:last-child {
@@ -70,6 +64,7 @@
             }
             @include sm{
                 padding: 20px;
+                border: 1px solid #999;
             }
         }
 
