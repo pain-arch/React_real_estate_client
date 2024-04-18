@@ -2,8 +2,13 @@
 
 .searchBar {
     .type {
-        button {
 
+        @include sm {
+            margin-bottom: 5px;
+        }
+
+
+        button {
             padding: 16px 36px;
             border: 1px solid #999;
             border-bottom: none;
@@ -19,6 +24,10 @@
             &:first-child {
                 border-top-left-radius:5px;
                 border-right: none;
+
+                @include sm {
+                    border-bottom: 1px solid #999;
+                }
             }
 
             &:last-child {
@@ -35,6 +44,11 @@
         height: 64px;
         gap: 5px;
 
+        @include sm {
+            flex-direction: column;
+            border: none;
+        }
+
         input{
             border: none;
             padding: 0 10px;
@@ -47,6 +61,16 @@
                     width: 140px;
                 }
             }
+
+            @include md{
+                width: auto;
+                &:nth-child(2),&:nth-child(3){
+                    width: auto;
+                }
+            }
+            @include sm{
+                padding: 20px;
+            }
         }
 
         button{
@@ -54,6 +78,10 @@
             cursor: pointer;
             background-color: #FECE5F;
             flex: 1;
+
+            @include sm{
+                padding: 10px;
+            }
         }
         img{
             width: 24px;
