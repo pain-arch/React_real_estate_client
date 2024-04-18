@@ -1,6 +1,10 @@
 import HomePage from "./routes/homePage/homePage";
 import Layout from "./routes/layout/layout";
 import ListPage from "./routes/listPage/listPage";
+import SinglePage from "./routes/singlePage/singlePage";
+
+
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -14,6 +18,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/list", element: <ListPage /> },
+      { path: "/list/:id", element: <SinglePage />}
     ],
   },
 ]);
@@ -21,14 +26,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    // <div className="layout">
-    //   <div className="navbar">
-    //     <Navbar />
-    //   </div>
-    //   <div className="content">
-    //     <HomePage />
-    //   </div>
-    // </div>
+    
     <RouterProvider router={router}/>
   );
 }
