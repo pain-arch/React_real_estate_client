@@ -8,7 +8,7 @@ function SinglePage() {
         <div className="wrapper">
           <Slider />
           <div className="info">
-            <div className="top"></div>
+            <div className="top"> top</div>
             <div className="bottom"></div>
           </div>
         </div>
