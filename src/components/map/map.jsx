@@ -9,8 +9,8 @@ function Map({ item }) {
 
   return (
     <MapContainer
-      center={[51.5074, -0.1278]}
-      zoom={6}
+      center={[52.4862, -1.8904]}
+      zoom={7}
       scrollWheelZoom={false}
       className="map"
     >
