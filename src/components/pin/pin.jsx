@@ -1,32 +1,22 @@
-import { MapContainer, TileLayer } from "react-leaflet";
-import "./map.scss";
-import "leaflet/dist/leaflet.css";
-import Pin from "../pin/pin";
+import { Marker, Popup } from "react-leaflet";
+import "./pin.scss";
+import { Link } from "react-router-dom";
 
-function Map({ item }) {
-
-  console.log(item);
-
+function Pin({ item }) {
   return (
-    <MapContainer
-      center={[51.5074, -0.1278]}
-      zoom={7}
-      scrollWheelZoom={false}
-      className="map"
-    >
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-
-    {
-            item?.map((i) => (
-              <Pin key={i.id} data={it} />
-            ))      
-    }
-      
-    </MapContainer>
+    <Marker position={[item.latitude, item.longitude]}>
+      <Popup>
+        <div className="popupContainer">
+          <img src={item.img} alt="" />
+          <div className="textContainer">
+            <Link to={`/${item.id}`}>{item.title}</Link>
+            <span>{item.bedroom} bedroom</span>
+            <b>$ {item.price}</b>
+          </div>
+        </div>
+      </Popup>
+    </Marker>
   );
 }
 
-export default Map;
+export default Pin;
