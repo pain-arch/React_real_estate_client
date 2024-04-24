@@ -24,7 +24,10 @@ function Navbar() {
           user ? (<div className="user">
             <img src="https://avatars.githubusercontent.com/u/61962850?s=400&u=5e8ba51a235a1cfc92ea021106dd78894de317eb&v=4" alt="Profile" />
             <span>John Doe</span>
-            <Link to={'/profile'} className="profile">Profile</Link>
+            <Link to={'/profile'} className="profile">
+              <div className="notification">3</div>
+              <span>Profile</span>
+            </Link>
           </div>): (<>
             <a href="/login" className="login_btn">Login</a>
             <a href="/register" className="register_btn">Sign Up</a>
