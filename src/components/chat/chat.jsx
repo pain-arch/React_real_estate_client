@@ -1,6 +1,10 @@
+import { useState } from 'react';
 import './chat.scss'
 
-function Chat(){
+function Chat() {
+    
+    const [chat, setChat] = useState(true);
+
   return (
       <div className='chat'>
           <div className='messages'>
@@ -50,7 +54,8 @@ function Chat(){
 
  
           </div>
-          <div className="chatBox">
+          {chat && (
+        <div className="chatBox">
           <div className="top">
             <div className="user">
               <img
@@ -108,6 +113,7 @@ function Chat(){
             <button>Send</button>
           </div>
         </div>
+      )}
     </div>
   )
 }
